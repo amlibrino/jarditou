@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--width=device-width : fixe la largeur de la fenêtre = celle de l'appareil-->
+    <!--initial-scale=1.0 : niveau de zoom initial (ici échelle = 1, soit 100%)-->
+    <!--shrink-to-fit=no : règle un bug spécifique du navigateur Apple Safari mobile IOS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- pour integrer la feuille de style css de bootstrap ici directement sur le site internet de bootstrap -->
+    <link rel="stylesheet" href="assets/css/formulairecss.css"><!--liens vers le fichier css formulaire-->
+    <title>formulaire jarditou</title> <!--titre de la page barre  de navigation referencement-->
+</head>
+
+<body>
+    <header>
+        <p class="jardin"> Tout le jardin</p>
+        <img width="300" height="100" id="logo" src="assets/images/jarditou_logo.jpg" alt="jarditou_logo"
+            title="logo-jarditou">
+    </header>
+
+    <nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark"> <!--menu burger avec bootstrap-->
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+
+                <li><a class="nav-link" href="index.html" title="accueil">Accueil</a></li><!--liens du menu burger-->
+                <li><a class="nav-link" href="tableau.html" title="tableau">Tableau</a></li>
+                <li> <a class="nav-link" href="formulaires.html" title="formulaire">Contact</a></li>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <img class="lames" src="assets/images/promotion.jpg" alt="promotion sur les lames de terrasse"
+        title="promotion sur les lames de terrasse">
+    <hr><!-- division horizontale-->
+    <p class="zone">* Ces zones sont obligatoires</p>
+    <form action="http://bienvu.net/script.php" method="POST"><!--recuperer les information saisie dans le formulaire coté serveur-->
+        <div class="form-group"><!--rendre le formulaire responsif avec bootstrap-->
+            <fieldset>
+                <legend> Coordonnnées </legend>
+                <div>
+                    <label for="nom"> Votre nom*: </label>
+                    <input type="text" name="nom" id="nom" required><span id="missNom"></span></div>
+                <div>
+                    <label for="prenom"> Votre prénom*: </label>
+                    <input type="text" name="prénom" id="prenom" required><span id="missPrenom"></span>
+                </div>
+                <div><label for="sexe"> Sexe* :</label><br>
+                    <input type="radio" name="sexe" id="sexe" required value="Féminin"> Féminin
+                    <input type="radio" name="sexe" id="sexe" required value="Masculin"> Masculin <span
+                        id="missSexe"></span></div>
+                <div>
+                    <label for="ddn"> Date de naissance*</label>
+                    <input type="date" name="ddn" id="ddn" required> <span id="missDdn"></span>
+                </div>
+                <div><label for="cp">Code postal :</label> <input type="text" name="code postal" id="cp" maxlength="5"
+                        required><span id="missCp"></span></div>
+                <div><label for="adresse">Adresse :</label> <input type="text" name="Adresse" id="adresse"
+                        required><span id="missAdr"></span></div>
+                <div><label for="ville">Ville : </label><input type="text" name="ville" id="ville" required><span
+                        id="missVille"></span></div>
+                <div><label for="mail"> Email* : </label> <input type="mail" name="mail" id="mail"
+                        placeholder="deve.loper@afpa.fr" required><span id="missMail"></span></div>
+                <div>
+                    <label for="tel"> Telephone *:</label><input type="tel" name="tel" id="tel" required><span
+                        id="missTel"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Votre demande </legend>
+                <p>Sujet* :
+                    <select name="commande" size="1" id="select" required>
+                        <option value="" selected disabled> Selectionnez votre choix</option>
+                        <option value="Mes demandes"> Mes demandes </option>
+                        <option value="Question sur un produit"> Question sur un produit </option>
+                        <option value="Réclamation"> Reclamation</option>
+                        <option value="Autres"> Autres</option>
+                    </select> </p>
+                <div><label for="area"> Votre question* : </label> <textarea name="" id="area" cols="30" rows="3"
+                        required></textarea> <span id="missArea"></span> </div>
+            </fieldset>
+            <input type="checkbox" id="check" required> J'accepte le traitement informatique de ce formulaire.<span
+                id="missCheck"></span><br>
+            <input type="submit" value="Envoyer" id="envoyer">
+            <input type="reset" value="annuler">
+        </div>
+    </form>
+    <hr>
+    <footer>
+        <ul>
+            <li> <a href="" title="mentions légales">Mentions légales</a></li>
+            <li> <a href="" title="horaires">Horaires</a></li>
+            <li> <a href="" title="plan du site">Plan du site</a></li>
+        </ul>
+    </footer>
+    <!--scripte nécéssaire a bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- fichiers javascript nécessaire a bootstrap  avant la fermeture body-->
+    <script src="assets/js/formulaire_jarditou.js"></script><!--liens le fichier javascript-->
+</body>
+
+</html>

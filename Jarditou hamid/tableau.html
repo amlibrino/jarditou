@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--width=device-width : fixe la largeur de la fenêtre = celle de l'appareil-->
+    <!--initial-scale=1.0 : niveau de zoom initial (ici échelle = 1, soit 100%)-->
+    <!--shrink-to-fit=no : règle un bug spécifique du navigateur Apple Safari mobile IOS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- pour integrer la feuille de style css de bootstrap ici directement sur le site internet de bootstrap -->
+
+    <link rel="stylesheet" href="assets/css/tableaucss.css">
+    <title> tableau jarditou</title>
+</head>
+
+<body>
+    <header>
+        <p class="jardin"> Tout le jardin</p>
+        <img width="300" height="100" id="logo" src="assets/images/jarditou_logo.jpg" alt="jarditou_logo"
+            title="logo-jarditou">
+    </header>
+
+    <nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+
+                <li><a class="nav-link" href="index.html" title="accueil">Accueil</a></li>
+                <li><a class="nav-link" href="tableau.html" title="tableau">Tableau</a></li>
+                <li> <a class="nav-link" href="formulaires.html" title="formulaire">Contact</a></li>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <img class="lames" src="assets/images/promotion.jpg" alt="promotion sur les lames de terrasse"
+        title="promotion sur les lames de terrasse">
+
+    <hr>
+
+    <div class="table-responsive"><!--rendre le tableau responsif avec bootstrap-->
+        <table class="table table-striped table-hover table-bordered">
+            <!--.table-bordered : affiche les bordures-->
+            <!--table-striped : ajoute un fond de couleur à une ligne sur deux pour faciliter la lisibilité-->
+            <!--.table-hover : surligne la ligne en cours de survol de la souris.-->
+            <caption> Tableau de nos articles </caption><!-- legende du tableau-->
+            <thead><!--l'entete du tableau-->
+                <tr>
+                    <th> photo </th>
+                    <th> ID </th>
+                    <th> Catégorie </th>
+                    <th> Libellé </th>
+                    <th> Prix </th>
+                    <th> Couleur </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> <img class="imgtableau" width="180" height="130" src="assets/images/7.jpg" alt="barbecues">
+                    </td>
+                    <td>7</td>
+                    <td> Barbecues </td>
+                    <td class="libelle"> Aramis </td>
+                    <td> 110.00(€)</td>
+                    <td> Brun </td>
+                </tr>
+                <tr>
+                    <td> <img class="imgtableau" width="180" height="130" src="assets/images/8.jpg" alt="barbecues">
+                    </td>
+                    <td>8</td>
+                    <td> Barbecues </td>
+                    <td class="libelle"> Athos </td>
+                    <td> 249.99(€)</td>
+                    <td> Noir </td>
+                </tr>
+                <tr>
+                    <td> <img class="imgtableau" width="180" height="130" src="assets/images/11.jpg" alt="barbecues">
+                    </td>
+                    <td>11</td>
+                    <td> Barbecues </td>
+                    <td class="libelle"> Clatronic </td>
+                    <td> 135.90(€)</td>
+                    <td> Chrome </td>
+                </tr>
+                <tr>
+                    <td> <img class="imgtableau" width="180" height="130" src="assets/images/12.jpg" alt="barbecues">
+                    </td>
+                    <td>12</td>
+                    <td> Barbecues </td>
+                    <td class="libelle"> Camping </td>
+                    <td> 88.00(€)</td>
+                    <td> Noir </td>
+                </tr>
+
+                <tr>
+                    <td> <img class="imgtableau" width="180" height="130" src="assets/images/13.jpg" alt="brouettes">
+                    </td>
+                    <td>13</td>
+                    <td> Brouettes </td>
+                    <td class="libelle"> Green </td>
+                    <td> 49.00(€)</td>
+                    <td> Verte </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <footer>
+        <ul>
+            <li> <a href="" title="mentions légales">Mentions légales</a></li>
+            <li> <a href="" title="horaires">Horaires</a></li>
+            <li> <a href="" title="plan du site">Plan du site</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- fichiers javascript nécessaire a bootstrap  avant la fermeture body-->
+
+</body>
+
+</html>
